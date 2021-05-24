@@ -6,8 +6,10 @@ window.addEventListener("DOMContentLoaded", () => {
   if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     // Use video without audio
     const constraints = {
-      video: true,
       audio: false,
+      video: {
+        facingMode: "environment",
+      },
     };
 
     //   // Start video stream
